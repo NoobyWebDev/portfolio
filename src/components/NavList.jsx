@@ -1,6 +1,14 @@
 import { motion } from "framer-motion"
 
-export const NavList = ({ children, textSize, paddingY, paddingX }) => {
+export const NavList = ({
+  children,
+  textSize,
+  paddingY,
+  paddingX,
+  textColor,
+  hovorTextColor,
+  hRef,
+}) => {
   return (
     <motion.li
       whileHover={{ scale: 1.2 }}
@@ -9,8 +17,8 @@ export const NavList = ({ children, textSize, paddingY, paddingX }) => {
       className={`${textSize} ${paddingY}`}
     >
       <a
-        href='#'
-        className={`${paddingX} font-light bg-neutral-900  text-neutral-100 focus:text-sky-400 hover:text-sky-400`}
+        href={hRef}
+        className={`${paddingX} font-light ${textColor} hover:${hovorTextColor}`}
       >
         {children}
       </a>
