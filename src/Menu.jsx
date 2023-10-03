@@ -14,7 +14,7 @@ export const Menu = () => {
     animate: {
       scaleY: 1,
       transition: {
-        duration: 1.5,
+        duration: 0.5,
         ease: [0.12, 0, 0.39, 0],
       },
     },
@@ -47,15 +47,7 @@ export const Menu = () => {
             hovorTextColor='text-yellow-300'
             hRef='#'
           >
-            About
-          </NavList>
-          <NavList
-            textSize='text-xl'
-            textColor='text-neutral-100'
-            hovorTextColor='text-yellow-300'
-            hRef='#'
-          >
-            Skills
+            Experience
           </NavList>
           <NavList
             textSize='text-xl'
@@ -69,9 +61,9 @@ export const Menu = () => {
             textSize='text-xl'
             textColor='text-neutral-100'
             hovorTextColor='text-yellow-300'
-            hRef='https://drive.google.com/file/d/1mrcLIhxMj5m2QcSLv_-V_EhXNMWS-bfV/view?usp=sharing'
+            hRef='#'
           >
-            CV
+            Contact
           </NavList>
         </ul>
 
@@ -112,16 +104,7 @@ export const Menu = () => {
               textColor='text-neutral-900'
               hRef='#'
             >
-              About
-            </NavList>
-            <NavList
-              textSize='text-4xl'
-              paddingY='py-8'
-              paddingX='px-10'
-              textColor='text-neutral-900'
-              hRef='#'
-            >
-              Skills
+              Experience
             </NavList>
             <NavList
               textSize='text-4xl'
@@ -137,9 +120,8 @@ export const Menu = () => {
               paddingY='py-8'
               paddingX='px-10'
               textColor='text-neutral-900'
-              hRef='https://drive.google.com/file/d/1mrcLIhxMj5m2QcSLv_-V_EhXNMWS-bfV/view?usp=sharing'
             >
-              CV
+              Contact
             </NavList>
           </motion.ul>
         </AnimatePresence>
