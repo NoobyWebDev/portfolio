@@ -1,31 +1,12 @@
 import { useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { NavList } from "./components/NavList"
-import { AnimatePresence, motion } from "framer-motion"
 export const Menu = () => {
   const [nav, setNav] = useState(false)
   const handleNav = () => {
     setNav((prev) => !prev)
   }
-  const menuVars = {
-    initial: {
-      scaleY: 0,
-    },
-    animate: {
-      scaleY: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.12, 0, 0.39, 0],
-      },
-    },
-    exit: {
-      scaleY: 0,
-      transition: {
-        duration: 1.5,
-        ease: [0.12, 1, 0.39, 1],
-      },
-    },
-  }
+
   return (
     <div>
       <nav className=' text-neutral-100 font-bold font-mono flex py-8 justify-between text-xl'>
@@ -76,55 +57,50 @@ export const Menu = () => {
             <FaTimes className=' w-6 h-6 text-neutral-900 hover:scale-125' />
           )}
         </div>
-        <AnimatePresence>
-          <motion.ul
-            variants={menuVars}
-            initial='initial'
-            animate='animate'
-            exit='exit'
-            className={
-              !nav
-                ? "hidden"
-                : "absolute flex flex-col justify-center items-center w-full h-screen bg-yellow-300 top-0 left-0 origin-top"
-            }
+
+        <ul
+          className={
+            !nav
+              ? "hidden"
+              : "fixed flex flex-col justify-center items-center w-full h-screen bg-yellow-300 top-0 left-0 origin-top "
+          }
+        >
+          <NavList
+            textSize='text-4xl'
+            paddingY='py-8'
+            paddingX='px-10'
+            textColor='text-neutral-900'
+            hRef='#'
           >
-            <NavList
-              textSize='text-4xl'
-              paddingY='py-8'
-              paddingX='px-10'
-              textColor='text-neutral-900'
-              hRef='#'
-            >
-              Home
-            </NavList>
-            <NavList
-              textSize='text-4xl'
-              paddingY='py-8'
-              paddingX='px-10'
-              textColor='text-neutral-900'
-              hRef='#'
-            >
-              Experience
-            </NavList>
-            <NavList
-              textSize='text-4xl'
-              paddingY='py-8'
-              paddingX='px-10'
-              textColor='text-neutral-900'
-              hRef='#'
-            >
-              Project
-            </NavList>
-            <NavList
-              textSize='text-4xl'
-              paddingY='py-8'
-              paddingX='px-10'
-              textColor='text-neutral-900'
-            >
-              Contact
-            </NavList>
-          </motion.ul>
-        </AnimatePresence>
+            Home
+          </NavList>
+          <NavList
+            textSize='text-4xl'
+            paddingY='py-8'
+            paddingX='px-10'
+            textColor='text-neutral-900'
+            hRef='#'
+          >
+            Experience
+          </NavList>
+          <NavList
+            textSize='text-4xl'
+            paddingY='py-8'
+            paddingX='px-10'
+            textColor='text-neutral-900'
+            hRef='#'
+          >
+            Project
+          </NavList>
+          <NavList
+            textSize='text-4xl'
+            paddingY='py-8'
+            paddingX='px-10'
+            textColor='text-neutral-900'
+          >
+            Contact
+          </NavList>
+        </ul>
       </nav>
     </div>
   )
