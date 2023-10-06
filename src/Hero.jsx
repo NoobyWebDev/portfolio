@@ -26,21 +26,21 @@ export const Hero = () => {
           <AiFillFacebook className='hover:scale-110 hover:text-yellow-300' />
         </a>
         <a
-          href='https://www.facebook.com/Shahriarshaan1190'
+          href='https://twitter.com/shahriar_s26364'
           target='_blank'
           rel='noopener noreferrer'
         >
           <AiFillTwitterCircle className='hover:scale-110 hover:text-yellow-300' />
         </a>
         <a
-          href='https://www.facebook.com/Shahriarshaan1190'
+          href='https://www.linkedin.com/in/shameem-shahriar/'
           target='_blank'
           rel='noopener noreferrer'
         >
           <AiFillLinkedin className='hover:scale-110 hover:text-yellow-300' />
         </a>
         <a
-          href='https://www.facebook.com/Shahriarshaan1190'
+          href='https://github.com/NoobyWebDev'
           target='_blank'
           rel='noopener noreferrer'
         >
